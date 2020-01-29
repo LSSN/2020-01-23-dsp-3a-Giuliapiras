@@ -1,0 +1,8 @@
+// crea un file di faust in cui, esponi in forma di commento, i principi della sintesi sottrattiva. Realizza un esempio attraverso un filtraggio passa banda.
+// nella sintesi sottrattiva principalmente vengono utilizzati dei filtri che limitano le frquenze del segnale che li viene dato in ingresso;
+// sono due tipi di filtri , passa basso e passa alto ;
+//il filtro passa basso fa passare le frequenze comprese tra 0 Hz e fcut che è la frrequenza di taglio.
+//il filtro passa alto fa passare tutte le frequenze maggiori della sua frequenza di taglio. 
+import ("stdfaust.lib");
+fcut = 5000;
+process = fi.lowpass(2,fcut) : fi.highpass(2,fcut) ;
